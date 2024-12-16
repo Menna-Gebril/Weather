@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+    <div class="container">
+        <a class="navbar-brand" href="#">Weather</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Live Cameras</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="py-5 text-center">
+    <div class="container">
+        <input 
+            type="text" 
+            id="searchLocationInput" 
+            class="form-control w-50 mx-auto rounded-pill text-center" 
+            placeholder="Write Your Location..."
+        />
+    </div>
+</section>
+<section class="container">
+    <div class="row g-4 mx-3">
+        <div class="col-md-4">
+            <div class="card bg-sec-color rounded-4">
+                <div class="item d-flex justify-content-between py-2 px-3 bg-main-color text-white" id="todayDate">
+                    <p id="dayName" class="my-auto"></p>
+                    <span>
+                        <span id="dayNumber" class="my-auto"></span>
+                        <span id="todayMonthCity" class="my-auto"></span>
+                    </span>
+                </div>
+                <div class="item px-3 py-3 pt-5 text-white" id="today">
+                    <p id="todayLocation" class="fs-4"></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="fs-1 fw-bolder">
+                            <span id="todayTemp"></span>°C
+                        </span>
+                        <img id="todayConditionImg" src="" alt=""/>
+                    </div>
+                    <p id="todayText" class="fs-6 text-color"></p>
+                </div>
+                <div class="item d-flex text-light p-3">
+                    <div class="d-flex me-3">
+                        <img src="images/icon-umberella@2x.png" class="footer-icons me-2" alt="" />
+                        <p id="todayHumidity"></p>
+                    </div>
+                    <div class="d-flex me-3">
+                        <img src="images/icon-wind@2x.png" class="footer-icons mx-2" alt="" />
+                        <p id="todayWind"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-main-color rounded-4 text-white">
+                <div class="item py-2 text-center px-3 bg-main-color text-white">
+                    <p id="nextDayName" class="my-auto"></p>
+                </div>
+                <div class="item text-white p-3 text-center pt-5">
+                    <img id="nextConditionImg" src="" alt=""/>
+                    <h3>
+                        <span id="nextMaxTemp"></span><span>°C</span>
+                    </h3>
+                    <h5>
+                        <span id="nextMinTemp" class="text-white-50"></span><span class="text-white-50">°C</span>
+                    </h5>
+                    <p id="nextConditionText" class="fs-6 text-color"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-sec-color rounded-4 text-white">
+                <div class="item py-2 text-center px-3 bg-main-colr text-white">
+                    <p id="afterNextDayName" class="my-auto"></p>
+                </div>
+                <div class="item text-white p-3 text-center pt-5">
+                    <img id="afterNextConditionImg" src="" alt="" width="50"/>
+                    <h3>
+                        <span id="afterNextMaxTemp"></span><span>°C</span>
+                    </h3>
+                    <h5>
+                        <span id="afterNextMinTemp" class="text-white-50"></span><span class="text-white-50">°C</span>
+                    </h5>
+                    <p id="afterNextConditionText" class="fs-6 text-color"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>

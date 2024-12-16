@@ -1,0 +1,38 @@
+body {
+  background-image: url(../images/banner.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.card {
+  background-color: #323546;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+#searchLocationInput {
+  background-color: #323546;
+  border: none;
+  color: white;
+  text-align: center;
+}
+.item {
+  margin: 10px 0;
+}
+.bg-main-color {
+  background-color: #2d2f41;
+}
+.bg-sec-color {
+  background-color: #323546;
+}
+.footer-icons {
+  width: 20px;
+}
+.text-color {
+  color: #6c757d;
+}
