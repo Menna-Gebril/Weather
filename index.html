@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body>
+    <nav class="my-nav navbar navbar-expand-lg">
+      <div class="container">
+        <div class="logo d-flex align-items-center">
+          <div class="logo-img">
+            <img src="images/logo@2x.png" alt="" />
+          </div>
+          <div class="logo-title pt-2 ps-3">
+            <h1>Weather</h1>
+            <p>tagline goes here</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="fa fa-bars text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="menus navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+
+            <li class="nav-item last">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="loading d-none" id="loading">
+        <span class="loader"></span>
+      </div>
+      <section id="home">
+        <div class="container">
+          <div class="search-bar py-5">
+            <div class="mb-3 w-75 m-auto">
+              <input
+                type="text"
+                class="form-control w-100 rounded-pill border-0 py-3"
+                id="searchLocationInput"
+                placeholder="Find your location..."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="main-forcast mt-5 z-3">
+          <div class="container">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <div class="inner">
+                  <div
+                    class="forcast-header d-flex align-items-center justify-content-between"
+                  >
+                    <span id="day"></span>
+                    <div>
+                      <span id="date"></span>
+                      <span id="month"></span>
+                    </div>
+                  </div>
+                  <div class="forcast-content">
+                    <span class="city"></span>
+
+                    <div class="forcast-details">
+                      <div class="temp">
+                        <span id="todayTemp"></span>
+                      </div>
+                      <img id="todayConditionImg" src="" alt="" />
+                    </div>
+
+                    <span id="dayWeather" class="weather"></span>
+
+                    <div class="forcast-icons d-flex align-items-center pb-3">
+                      <span>
+                        <img src="images/icon-umberella@2x.png" alt="" />
+                      </span>
+                      <span id="todayHumidity"></span>
+                      <span>
+                        <img src="images/icon-wind@2x.png" alt="" />
+                      </span>
+                      <span id="todayWind"></span>
+                      <span>
+                        <img src="images/icon-compass@2x.png" alt="" />
+                      </span>
+                      <span>East</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="today text-center">
+                    <span id="dayNext"></span>
+                  </div>
+                  <div class="today-content text-center">
+                    <img id="NextConditionImg" src="" class="py-3" alt="" />
+                    <span id="degreeNext" class="text-white weather-degree">
+                    </span>
+                    <span
+                      id="subDegreeNext"
+                      class="degree p-0 m-0 d-block"
+                    ></span>
+                    <span id="dayNextWeather" class="weather"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="forcast-header-last text-center">
+                    <span id="dayLast"></span>
+                  </div>
+                  <div class="today-content forcast-content-last text-center">
+                    <img id="LastConditionImg" src="" class="py-3" alt="" />
+                    <span
+                      id="degreeLast"
+                      class="text-white weather-degree"
+                    ></span>
+                    <span
+                      id="subDegreeLast"
+                      class="degree p-0 m-0 d-block"
+                    ></span>
+                    <span id="dayLastWeather" class="weather"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="weather-footer py-5">
+        <div class="container">
+          <div
+            class="main-footer d-flex align-items-center justify-content-evenly"
+          >
+            <div class="pt-5">
+              <p>
+                Copyright <span id="year"></span> Company name. Designed by
+                Themezy. All rights reserved
+              </p>
+            </div>
+            <div class="icons pt-4">
+              <span>
+                <i class="fa-brands fa-facebook-f"></i>
+              </span>
+              <span>
+                <i class="fa-brands fa-twitter"></i>
+              </span>
+              <span>
+                <i class="fa-brands fa-google-plus-g"></i>
+              </span>
+
+              <span>
+                <i class="fa-brands fa-pinterest"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
